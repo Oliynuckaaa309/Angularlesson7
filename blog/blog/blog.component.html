@@ -1,0 +1,8 @@
+<div class="main-wrap">
+    <div class="current-wrap" *ngFor="let item of blogs">
+        <img src={{item.imagePath}} alt="Blog's photo">
+        <p class="name">{{item.author}}</p>
+        <p class="title">{{item.title}}</p>
+        <p>{{item.description}}</p>
+    </div>
+</div>

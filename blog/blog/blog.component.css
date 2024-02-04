@@ -1,0 +1,25 @@
+.main-wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.current-wrap{
+    width: 30%;
+    margin: 20px 10px 15px 10px;
+}
+img{
+    height: 200px;
+    
+    
+}
+.name{
+    color: aquamarine;
+    padding: 7px 0px ;
+    font-size: 20px;
+}
+.title{
+    font-weight: 600;
+    font-size: 25px;
+    padding-bottom: 10px;
+
+}

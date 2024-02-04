@@ -1,0 +1,40 @@
+<div class="wrap-container">
+    <div class="inner">
+      <div class="blogs">Blogs</div>
+      <div class="forms">
+        <div>
+             <input type="text" placeholder="title here..." [(ngModel)]="title" ngDefaultControl > 
+        </div>
+        <div>
+            <textarea name="" placeholder="text here..." [(ngModel)]="text" ngDefaultControl name="text"
+            ></textarea>
+        </div>
+       <div><input type="text" placeholder="author here..." [(ngModel)]="author" ngDefaultControl></div> 
+       <button *ngIf="!editStatus" class="addBtn" (click)="createNew()">Add</button> 
+     <button *ngIf="editStatus" class="addBtn" (click)="saveChanges()">Save</button> 
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Text</th>
+            <th>Author</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of blogs, let i=index" >
+            <td>{{i+1}}.</td>
+            <td>{{item.title}}</td>
+            <td>{{item.description | slice :0: 21}}...</td>
+            <td>{{item.author}}</td>
+            <td><button class="childBtn"  (click)="editBlogs(item, item.id)" >Edit</button></td>
+            <td><button class="childBtn" (click)="deleteBlogs(item.id)">Delete</button></td> 
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      
+    </div>
+</div>
